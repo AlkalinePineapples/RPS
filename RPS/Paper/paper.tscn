@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cthiqpe254w4d"]
+
+[ext_resource type="Texture2D" uid="uid://c1k0j5n1o0tlj" path="res://Paper/PHpaper.png" id="1_s2rot"]
+[ext_resource type="Script" path="res://Paper/paper.gd" id="1_ujvyt"]
+
+[node name="Paper" type="CharacterBody2D" groups=["Character"]]
+script = ExtResource("1_ujvyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s2rot")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-57, -81, -57, 43, -29, 84, 46, 84, 56, 40, 56, -81)
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true

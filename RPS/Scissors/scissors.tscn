@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dri5qitfqdp1"]
+
+[ext_resource type="Texture2D" uid="uid://cj6tfo6mgrula" path="res://Scissors/PHscissors.png" id="1_ormpm"]
+[ext_resource type="Script" path="res://Scissors/scissors.gd" id="1_vkcwd"]
+
+[node name="Scissors" type="CharacterBody2D" groups=["Character"]]
+script = ExtResource("1_vkcwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ormpm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-76, -73, -76, 48, -76, 48, -64, 82, 12, 82, 25, 48, 25, 48, 25, -73)
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true

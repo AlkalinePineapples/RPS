@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwcwn6r671xs3"]
+
+[ext_resource type="Script" path="res://Rock/Rock.gd" id="1_g01je"]
+[ext_resource type="Texture2D" uid="uid://cbaehputc78fk" path="res://Rock/PHrock.png" id="2_qpwag"]
+
+[node name="Rock" type="CharacterBody2D"]
+script = ExtResource("1_g01je")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qpwag")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["Character"]]
+polygon = PackedVector2Array(-45, -86, -70, -18, -90, -14, -75, 51, -34, 89, 45, 89, 76, 50, 91, -3, 70, -12, 59, -86)
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
